@@ -2,8 +2,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index),  # Coincide con la URL raíz
-    path('about/', views.about),
-    path('hello/<str:username>/', views.hello),  # Coincide con URL con un parámetro username
+    path('myapp/login_registro/', views.login_registro, name='login_registro'),
+    path('myapp/inicio_jugueteria/', views.inicio_jugueteria, name='inicio_jugueteria'),
 ]
+
+
+
+
 

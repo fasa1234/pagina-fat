@@ -1,11 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
-def index(request):
-    return HttpResponse ("index page")
-def hello(request, username):
-    print(username)
-    return HttpResponse("<h2>hello %s</h2>" %username)
+def login_registro(request):
+    return render(request, 'myapp/login_registro.html')
 
-def about(request):
-    return HttpResponse('about')
+def inicio_jugueteria(request):
+    return render(request, 'myapp/inicio_jugueteria.html')
